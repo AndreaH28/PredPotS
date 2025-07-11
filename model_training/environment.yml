@@ -1,0 +1,32 @@
+name: predpots_env
+channels:
+  - conda-forge
+  - defaults
+  - dglteam
+dependencies:
+  - python=3.9
+  - numpy=1.26.4
+  - pandas=2.2.2
+  - scikit-learn=1.4.2
+  - rdkit=2022.03.5
+  - deepchem=2.8.0
+  - dgl=2.0.0
+  - dgllife=0.3.2
+  - matplotlib-base=3.4.3
+  - joblib=1.4.0
+  - flask=3.0.3
+  - dash=2.16.1
+  - pytorch=2.1.2
+  - pytorch-lightning=2.2.2
+  - statsmodels=0.14.1
+  - pip
+  - pip:
+      - keras==3.8.0
+      - tensorflow==2.16.2
+      - tensorflow-cpu==2.16.1
+      - tf_keras==2.16.0     
+      - deepchem==2.8.0
+      - tensorboard==2.16.2
+      - transformers==4.37.2
+      - rich==13.9.4
+

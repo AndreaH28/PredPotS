@@ -2,8 +2,7 @@
 
 **PredPotS** is a web application designed to predict one electron reduction potential in aqueous enviroment using machine learning models trained on chemical data.
 
-The live web app is available here:  
-[PredPotS Web Application](https://predpots.ttk.hu/)  
+The live web app is available here: [PredPotS Web Application](https://predpots.ttk.hu/)  
 
 ## This GitHub Repository
 
@@ -69,7 +68,7 @@ python train_models.py RP_CheMBL_SMILES.csv -model GraphConvModel
 
 After running the training script, you will find several output files and folders generated:
 
-- **best_models/**  
+- **`best_models/`**  
   Contains the best model saved according to early stopping criteria.
 
 - **`statistics_<MODEL>_<epoch>.txt`**  
@@ -84,8 +83,8 @@ After running the training script, you will find several output files and folder
 - **`metric_loss_<MODEL>_<epoch>.txt`**  
   Loss values recorded for each epoch, reported separately for train, valid, and test subsets.
 
-- **valid_save/**  
-- **early_stopping_save/**  
+- **`valid_save/`**  
+- **`early_stopping_save/`**  
 - **`<MODEL>_saved/`**  
   These directories contain intermediate saved files created during training. They are used for checkpointing and progress tracking but are not needed for final model evaluation.
 
