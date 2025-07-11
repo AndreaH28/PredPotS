@@ -91,4 +91,15 @@ After running the training script, you will find several output files and folder
 **Note:** The `<epoch>` number corresponds to the training epoch where the model performed best and was saved.  
 For detailed explanations please refer to the  [PredPotS Web Application](https://predpots.ttk.hu/) or the related [publication](YOUR_PAPER_LINK).
 
+<table>
+  <tr>
+    <td width="150">
+      <img src="assets/CompBat_logo.png" width="120"/>
+    </td>
+    <td>
+    This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 875565.
+    The content on this website represents the views of the authors, and the European Commission has no liability in respect of the content.
+    </td>
+  </tr>
+</table>
 
