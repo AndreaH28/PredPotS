@@ -4,7 +4,7 @@
 
 The live web app is available here: [PredPotS Web Application](https://predpots.ttk.hu/)  
 
-## Model Training Contents
+# Model Training Contents
 
 This folder contains the script to train the models, the environment setup, and example data.
 
