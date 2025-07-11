@@ -100,6 +100,10 @@ For detailed explanations please refer to the  [PredPotS Web Application](https:
     This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 875565.
     The content on this website represents the views of the authors, and the European Commission has no liability in respect of the content.
     </td>
+    <td width="120" align="right">
+      <img src="../assets/"eu_flag.jpg width="100">
+    </td>
+
   </tr>
 </table>
 
