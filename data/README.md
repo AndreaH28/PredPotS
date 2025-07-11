@@ -19,7 +19,7 @@ This folder contains datasets used for training and testing machine learning mod
 <table>
   <tr>
     <td width="150">
-      <img src="assets/CompBat_logo.png" width="120"/>
+      <img src="../assets/CompBat_logo.png" width="120"/>
     </td>
     <td>
     This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 875565.
