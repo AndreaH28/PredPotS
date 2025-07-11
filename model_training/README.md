@@ -101,7 +101,7 @@ For detailed explanations please refer to the  [PredPotS Web Application](https:
     The content on this website represents the views of the authors, and the European Commission has no liability in respect of the content.
     </td>
     <td width="120" align="right">
-      <img src="../assets/"eu_flag.jpg width="100">
+      <img src="../assets/eu_flag.jpg" width="100">
     </td>
 
   </tr>
