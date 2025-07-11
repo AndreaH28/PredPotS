@@ -76,19 +76,20 @@ After running the training script, you will find several output files and folder
   Training and validation statistics logged at the specified best epoch.
 
 - **`prediction_<MODEL>_<epoch>.txt`**  
-  Model predictions on the validation or test set at the best epoch.
+  Model predictions on all data points at the best epoch. Each row includes a ‘Set’ column indicating the subset (train, valid, or test) for each entry.
 
 - **`metric_MAE_<MODEL>_<epoch>.txt`**  
-  Mean Absolute Error metrics recorded at the best epoch.
+  Mean Absolute Error (MAE) per epoch for all subsets: train, valid, and test.
 
 - **`metric_loss_<MODEL>_<epoch>.txt`**  
-  Loss values recorded during training at the best epoch.
+  Loss values recorded for each epoch, reported separately for train, valid, and test subsets.
 
 - **valid_save/**  
 - **early_stopping_save/**  
 - **`<MODEL>_saved/`**  
-  Intermediate saved models for the GraphConvModel during training.
+  These directories contain intermediate saved files created during training. They are used for checkpointing and progress tracking but are not needed for final model evaluation.
 
-> Note: The `<epoch>` number corresponds to the training epoch where the model performed best and was saved.  
-> For detailed explanations please refer to the  [PredPotS Web Application](https://predpots.ttk.hu/) or the related [publication](YOUR_PAPER_LINK).
+**Note:** The `<epoch>` number corresponds to the training epoch where the model performed best and was saved.  
+For detailed explanations please refer to the  [PredPotS Web Application](https://predpots.ttk.hu/) or the related [publication](YOUR_PAPER_LINK).
+
 
