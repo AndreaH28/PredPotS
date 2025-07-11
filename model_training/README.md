@@ -4,6 +4,8 @@
 
 The live web app is available here: [PredPotS Web Application](https://predpots.ttk.hu/)  
 
+## Model Training Contents
+
 This folder contains the script to train the models, the environment setup, and example data.
 
 - **`train_models.py`** — The main training script to run different machine learning models on your dataset.  
