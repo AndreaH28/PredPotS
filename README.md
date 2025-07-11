@@ -1,13 +1,9 @@
 # PredPotS
 
-PredPotS is a web application designed to predict one electron reduction potential in aqueous enviroment using machine learning models trained on chemical data.
-
-## Web Application
+**PredPotS** is a web application designed to predict one electron reduction potential in aqueous enviroment using machine learning models trained on chemical data.
 
 The live web app is available here:  
 [PredPotS Web Application](https://predpots.ttk.hu/)  
-
-> The web app uses pretrained, saved ML models to provide fast and reliable predictions.
 
 ## This GitHub Repository
 
@@ -26,6 +22,7 @@ We provide a conda environment file `environment.yml` to help recreate the exact
 ```bash
 conda env create -f environment.yml
 conda activate predpots_env
+```
 
 ## Usage
 
@@ -33,38 +30,65 @@ To run the training code, use the following command:
 
 ```bash
 python train_models.py <filename> -model <MODEL>
-
+```
 
     <filename>: CSV file with the required headers (id, smiles, true)
 
     -model <MODEL>: Specify the model type to train (mandatory)
 
-Optional arguments
-Argument	Description
--p [PATIENCE]	Set patience for early stopping
--dr [DROPOUT]	Set dropout rate
--s [SEED]	Set random seed
--sp [SPLIT]	Set train/test split ratio
--max [NBEPOCH]	Set maximum number of epochs
--min [MINEPOCH]	Set minimum number of epochs
--pred, --predict	Run in prediction mode
--folw, --followtraining	Follow training progress
--estop, --early_stopping	Enable early stopping
-
-Available models
-
+### Available models
     AttentiveFPModel
-
     GraphConvModel
-
     GCNModel
-
     GATModel
-
     DAGModel
 
-Example
+### Optional Arguments
 
+| Argument               | Description                               | Default Value |
+|------------------------|-------------------------------------------|---------------|
+| `-p [PATIENCE]`        | Set patience for early stopping           | 2             |
+| `-dr [DROPOUT]`        | Set dropout rate                          | 0             |
+| `-s [SEED]`            | Set random seed                          | 289           |
+| `-sp [SPLIT]`          | Set train/test split ratio                | 42            |
+| `-max [NBEPOCH]`       | Set maximum number of epochs               | 150           |
+| `-min [MINEPOCH]`      | Set minimum number of epochs               | 100           |
+| `-pred, --predict`     | Run in prediction mode                     | False         |
+| `-folw, --followtraining` | Follow training progress                | False         |
+| `-estop, --early_stopping` | Enable early stopping                  | True          |
+
+**Note:** If these optional arguments are not provided, the script will use default values defined in the code.
+
+### Example
+
+```bash
 python train_models.py RP_CheMBL_SMILES.csv -model GraphConvModel
+```
 
+### Output Files and Directories
+
+After running the training script, you will find several output files and folders generated:
+
+- **best_models/**  
+  Contains the best model saved according to early stopping criteria.
+
+- **`statistics_<MODEL>_<epoch>.txt`**  
+  Training and validation statistics logged at the specified best epoch.
+
+- **`prediction_<MODEL>_<epoch>.txt`**  
+  Model predictions on the validation or test set at the best epoch.
+
+- **`metric_MAE_<MODEL>_<epoch>.txt`**  
+  Mean Absolute Error metrics recorded at the best epoch.
+
+- **`metric_loss_<MODEL>_<epoch>.txt`**  
+  Loss values recorded during training at the best epoch.
+
+- **valid_save/**  
+- **early_stopping_save/**  
+- **`<MODEL>_saved/`**  
+  Intermediate saved models for the GraphConvModel during training.
+
+> Note: The `<epoch>` number corresponds to the training epoch where the model performed best and was saved.  
+> For detailed explanations please refer to the  [PredPotS Web Application](https://predpots.ttk.hu/) or the related [publication](YOUR_PAPER_LINK).
 
